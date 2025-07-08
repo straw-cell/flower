@@ -13,6 +13,11 @@ package com.adminrole.controller;
 	        Admin loggedInAdmin = adminService.login(request);
 	        return ResponseEntity.ok(loggedInAdmin);
 	    }
+                @GetMapping("/all")
+		public ResponseEntity<Admin> getAllData()
+		{
+			List <Admin> list = adminService.getAllData();
+			return list;
 	}
 
 }
